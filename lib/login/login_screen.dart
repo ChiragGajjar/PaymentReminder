@@ -76,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Expanded(
                     child: Container(
                       margin:
-                          EdgeInsets.symmetric(horizontal: 35, vertical: 35),
+                          EdgeInsets.symmetric(horizontal: 35, vertical: 40),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(30)),
                       ),
@@ -107,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontSize: 16),
                           ),
                           SizedBox(
-                            height: 8,
+                            height: 10,
                           ),
                           TextField(
                             style: TextStyle(color: Colors.white),
@@ -127,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 hintText: 'Your username or email'),
                           ),
                           SizedBox(
-                            height: 16,
+                            height: 20,
                           ),
                           Text(
                             "Password",
@@ -137,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontSize: 16),
                           ),
                           SizedBox(
-                            height: 8,
+                            height: 10,
                           ),
                           TextField(
                             obscureText: true,
@@ -247,11 +247,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                   children: <Widget>[
                                     Image(
                                       image: AppImages.google_logo,
-                                      width: 24.0,
-                                      height: 24.0,
+                                      width: 20.0,
+                                      height: 20.0,
                                     ),
                                     SizedBox(
-                                      width: 5,
+                                      width: 10,
                                     ),
                                     Text(
                                       "Login with google",
@@ -267,7 +267,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                           SizedBox(
-                            height: 16,
+                            height: 20,
                           ),
                           Center(
                             child: InkWell(
@@ -286,7 +286,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                       style: TextStyle(fontSize: 15),
                                       textAlign: TextAlign.center,
                                     ),
-                                  ]),
+                                  ],
+                              ),
                             ),
                           ),
                         ],

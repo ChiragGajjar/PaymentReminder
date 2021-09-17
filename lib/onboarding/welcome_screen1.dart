@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:payment_app/Utils/app_images.dart';
 import 'package:payment_app/Utils/trensations_widgets.dart';
+import 'package:payment_app/login/login_screen.dart';
 
 class WelcomePage1 extends StatefulWidget {
   @override
@@ -115,6 +116,9 @@ class WelcomePage1State extends State<WelcomePage1> with SingleTickerProviderSta
                                     setState(() {
                                       currentIndex = currentIndex + 1;
                                     });
+                                    if (currentIndex == 3){
+                                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginScreen()));
+                                    }
                                   },
                                   child: Container(
                                     decoration: BoxDecoration(
