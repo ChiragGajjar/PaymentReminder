@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/Utils/app_images.dart';
 
+import '../search_screen.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -183,7 +185,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           // width: 150,
                           child: InkWell(
                             onTap: () {
-                              setState(() {});
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchScreen()));
                             },
                             child: Container(
                               decoration: BoxDecoration(
@@ -271,7 +273,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         Center(
                           child: InkWell(
                             onTap: () {
-                              setState(() {});
                             },
                             child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
