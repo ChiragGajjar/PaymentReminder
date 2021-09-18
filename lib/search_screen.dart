@@ -13,44 +13,42 @@ class _SearchScreenState extends State<SearchScreen> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: SafeArea(
-        child: Container(
-          margin: EdgeInsets.only(top: 30, left: 30, bottom: 5, right: 30),
-          child: Column(
-            children: [
-              Row(children: [
-                Image(
-                  height: 30,
-                  width: 30,
-                  image: AppImages.search_icon,
-                ),
-                SizedBox(
-                  height: 26,
-                  width: 15,
-                ),
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "Search",
-                      isDense: true,
-                      contentPadding: EdgeInsets.only(bottom: 5),
-                    ),
+    return SafeArea(
+      child: Container(
+        margin: EdgeInsets.only(top: 30, left: 30, bottom: 5, right: 30),
+        child: Column(
+          children: [
+            Row(children: [
+              Image(
+                height: 30,
+                width: 30,
+                image: AppImages.search_icon,
+              ),
+              SizedBox(
+                height: 26,
+                width: 15,
+              ),
+              Expanded(
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Search",
+                    isDense: true,
+                    contentPadding: EdgeInsets.only(bottom: 5),
                   ),
                 ),
-                SizedBox(
-                  height: 26,
-                  width: 15,
-                ),
-                Image(
-                  height: 30,
-                  width: 30,
-                  image: AppImages.close_icon,
-                ),
-              ]),
-              Expanded(
-                  child: Container(
+              ),
+              SizedBox(
+                height: 26,
+                width: 15,
+              ),
+              Image(
+                height: 30,
+                width: 30,
+                image: AppImages.close_icon,
+              ),
+            ]),
+            Expanded(
+              child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -60,7 +58,8 @@ class _SearchScreenState extends State<SearchScreen> {
                     ),
                     Text(
                       "What would you like \nto do?",
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                     ),
                     SizedBox(
                       height: 25,
@@ -71,7 +70,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                               color: Color(0xFF8E04CE),
                             ),
                             height: 120,
@@ -110,7 +110,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                               color: Color(0xFF8E04CE),
                             ),
                             height: 120,
@@ -149,7 +150,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                               color: Color(0xFF8E04CE),
                             ),
                             height: 120,
@@ -192,7 +194,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                               color: Color(0xFF8E04CE),
                             ),
                             height: 120,
@@ -231,7 +234,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                               color: Color(0xFF8E04CE),
                             ),
                             height: 120,
@@ -270,7 +274,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                               color: Color(0xFF8E04CE),
                             ),
                             height: 120,
@@ -313,7 +318,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                               color: Color(0xFF8E04CE),
                             ),
                             height: 120,
@@ -352,7 +358,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                               color: Color(0xFF8E04CE),
                             ),
                             height: 120,
@@ -391,7 +398,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
                               color: Color(0xFF8E04CE),
                             ),
                             height: 120,
@@ -428,47 +436,9 @@ class _SearchScreenState extends State<SearchScreen> {
                   ],
                 ),
               ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Bills',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Reports',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.supervised_user_circle_rounded),
-            label: 'Profile',
-          ),
-        ],
-        currentIndex: selectedIndex,
-        type: BottomNavigationBarType.fixed,
-        unselectedItemColor: Colors.grey,
-        selectedItemColor: Color(0xFF8E04CE),
-        unselectedLabelStyle: TextStyle(
-          color: Colors.red
-        ),
-        onTap: (index){
-          print(index);
-          setState(() {
-            selectedIndex = index;
-          });
-        },
       ),
     );
   }

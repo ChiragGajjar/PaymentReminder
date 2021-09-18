@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/Utils/app_images.dart';
+import 'package:payment_app/tabbarController.dart';
 
 import '../search_screen.dart';
 
@@ -185,7 +186,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           // width: 150,
                           child: InkWell(
                             onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchScreen()));
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => TabBarScreen()));
                             },
                             child: Container(
                               decoration: BoxDecoration(
