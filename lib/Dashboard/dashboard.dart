@@ -126,6 +126,185 @@ class DashboardState extends State<Dashboard> {
                             TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
                           ),
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
+
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: 30,
+                              width: 30,
+                              padding: EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                color: Colors.white,
+                              ),
+                              child: Image(
+                                image: AppImages.down_white,
+                                color: Colors.black,
+                                height: 10,
+                                width: 10,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: Container(
+                                height: 85,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                                  // color: Colors.white,
+                                ),
+                                child: ListView(
+                                  scrollDirection: Axis.horizontal,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.only(left: 5, right: 5),
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.all(5),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                                              color: Color(0xFFdb9ee8),
+                                            ),
+                                            child: Image(
+                                              image: AppImages.login_icon,
+                                              height: 50,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Container(
+                                            child: Text(
+                                              "Richard's Fee",
+                                              style:
+                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.white),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.only(left: 5, right: 5),
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.all(5),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                                              color: Color(0xFFdb9ee8),
+                                            ),
+                                            child: Image(
+                                              image: AppImages.login_icon,
+                                              height: 50,
+                                              // width: 20,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Container(
+                                            child: Text(
+                                              "House Fuel",
+                                              style:
+                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.white),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.only(left: 5, right: 5),
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.all(5),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                                              color: Color(0xFFdb9ee8),
+                                            ),
+                                            child: Image(
+                                              image: AppImages.login_icon,
+                                              height: 50,
+                                              // width: 20,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Container(
+                                            child: Text(
+                                              "Gas Refill",
+                                              style:
+                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.white),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.only(left: 5, right: 5),
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.all(5),
+                                            decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                                              color: Color(0xFFdb9ee8),
+                                            ),
+                                            child: Image(
+                                              image: AppImages.login_icon,
+                                              height: 50,
+                                              // width: 20,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Container(
+                                            child: Text(
+                                              "Gas Refill",
+                                              style:
+                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.white),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: 30,
+                              width: 30,
+                              padding: EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                color: Colors.white,
+                              ),
+                              child: Image(
+                                image: AppImages.down_white,
+                                color: Colors.black,
+                                height: 10,
+                                width: 10,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
