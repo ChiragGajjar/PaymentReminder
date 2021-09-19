@@ -175,7 +175,7 @@ class DashboardState extends State<Dashboard> {
                                             ),
                                             child: Image(
                                               image: AppImages.login_icon,
-                                              height: 50,
+                                              height: 40,
                                             ),
                                           ),
                                           SizedBox(
@@ -185,7 +185,7 @@ class DashboardState extends State<Dashboard> {
                                             child: Text(
                                               "Richard's Fee",
                                               style:
-                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.white),
+                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 13, color: Colors.white),
                                             ),
                                           ),
                                         ],
@@ -203,7 +203,7 @@ class DashboardState extends State<Dashboard> {
                                             ),
                                             child: Image(
                                               image: AppImages.login_icon,
-                                              height: 50,
+                                              height: 40,
                                               // width: 20,
                                             ),
                                           ),
@@ -214,7 +214,7 @@ class DashboardState extends State<Dashboard> {
                                             child: Text(
                                               "House Fuel",
                                               style:
-                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.white),
+                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 13, color: Colors.white),
                                             ),
                                           ),
                                         ],
@@ -232,7 +232,7 @@ class DashboardState extends State<Dashboard> {
                                             ),
                                             child: Image(
                                               image: AppImages.login_icon,
-                                              height: 50,
+                                              height: 40,
                                               // width: 20,
                                             ),
                                           ),
@@ -243,7 +243,7 @@ class DashboardState extends State<Dashboard> {
                                             child: Text(
                                               "Gas Refill",
                                               style:
-                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.white),
+                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 13, color: Colors.white),
                                             ),
                                           ),
                                         ],
@@ -261,7 +261,7 @@ class DashboardState extends State<Dashboard> {
                                             ),
                                             child: Image(
                                               image: AppImages.login_icon,
-                                              height: 50,
+                                              height: 40,
                                               // width: 20,
                                             ),
                                           ),
@@ -272,7 +272,7 @@ class DashboardState extends State<Dashboard> {
                                             child: Text(
                                               "Gas Refill",
                                               style:
-                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.white),
+                                              TextStyle(fontWeight: FontWeight.normal, fontSize: 13, color: Colors.white),
                                             ),
                                           ),
                                         ],

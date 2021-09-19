@@ -19,6 +19,7 @@ class TabBarScreenState extends State<TabBarScreen> {
       resizeToAvoidBottomInset: false,
       body: _getBody(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(0xFFF8EAFF),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
