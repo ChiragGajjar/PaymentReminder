@@ -14,9 +14,9 @@ class TabBarScreen extends StatefulWidget {
 
 class TabBarScreenState extends State<TabBarScreen> with TickerProviderStateMixin{
   int selectedIndex = 0;
-  late Animation<double> animation;
-  late CurvedAnimation curve;
-  late AnimationController _animationController;
+  // late Animation<double> animation;
+  // late CurvedAnimation curve;
+  // late AnimationController _animationController;
 
   final iconList = <IconData>[
     Icons.home,
@@ -34,27 +34,27 @@ class TabBarScreenState extends State<TabBarScreen> with TickerProviderStateMixi
   @override
   void initState() {
     // TODO: implement initState
-    _animationController = AnimationController(
-      duration: Duration(seconds: 1),
-      vsync: this,
-    );
-    curve = CurvedAnimation(
-      parent: _animationController,
-      curve: Interval(
-        0.5,
-        1.0,
-        curve: Curves.fastOutSlowIn,
-      ),
-    );
-
-    animation = Tween<double>(
-      begin: 0,
-      end: 1,
-    ).animate(curve);
-    Future.delayed(
-      Duration(seconds: 1),
-          () => _animationController.forward(),
-    );
+    // _animationController = AnimationController(
+    //   duration: Duration(seconds: 1),
+    //   vsync: this,
+    // );
+    // curve = CurvedAnimation(
+    //   parent: _animationController,
+    //   curve: Interval(
+    //     0.5,
+    //     1.0,
+    //     curve: Curves.fastOutSlowIn,
+    //   ),
+    // );
+    //
+    // animation = Tween<double>(
+    //   begin: 0,
+    //   end: 1,
+    // ).animate(curve);
+    // Future.delayed(
+    //   Duration(seconds: 1),
+    //       () => _animationController.forward(),
+    // );
 
     super.initState();
 
@@ -65,13 +65,18 @@ class TabBarScreenState extends State<TabBarScreen> with TickerProviderStateMixi
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: _getBody(selectedIndex),
-      floatingActionButton: FloatingActionButton(onPressed: () {  },
-        backgroundColor: Color(0xFF8E04CE),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        setState(() {
+            selectedIndex = 4;
+          });
+        },
+        shape: StadiumBorder(side: BorderSide(color: Color(0xFF8E04CE), width: 1)),
+        backgroundColor: selectedIndex == 4 ? Color(0xFF8E04CE) : Color(0xFFF8EAFF),
         child: Image(
           image: AppImages.home,
           height: 25,
           width: 25,
-          color: Color(0xFFF8EAFF),
+          color: selectedIndex == 4 ? Color(0xFFF8EAFF) : Color(0xFF8E04CE),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -104,8 +109,8 @@ class TabBarScreenState extends State<TabBarScreen> with TickerProviderStateMixi
         backgroundColor: Color(0xFFF8EAFF),
         activeIndex: selectedIndex,
         splashColor: HexColor('#FFA400'),
-        notchAndCornersAnimation: animation,
-        splashSpeedInMilliseconds: 300,
+        // notchAndCornersAnimation: animation,
+        // splashSpeedInMilliseconds: 300,
         notchSmoothness: NotchSmoothness.defaultEdge,
         gapLocation: GapLocation.center,
         // leftCornerRadius: 32,
@@ -114,6 +119,7 @@ class TabBarScreenState extends State<TabBarScreen> with TickerProviderStateMixi
           setState(() {
             selectedIndex = index;
           });
+          print(selectedIndex);
         },
       ),
 
