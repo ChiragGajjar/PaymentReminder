@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:payment_app/Dashboard/dashboard.dart';
 import 'package:payment_app/search_screen.dart';
 
+import 'Utils/animated_bottom_navigation_bar.dart';
 import 'Utils/app_images.dart';
 
 class TabBarScreen extends StatefulWidget {
@@ -11,53 +12,111 @@ class TabBarScreen extends StatefulWidget {
   TabBarScreenState createState() => TabBarScreenState();
 }
 
-class TabBarScreenState extends State<TabBarScreen> {
+class TabBarScreenState extends State<TabBarScreen> with TickerProviderStateMixin{
   int selectedIndex = 0;
+  late Animation<double> animation;
+  late CurvedAnimation curve;
+  late AnimationController _animationController;
+
+  final iconList = <IconData>[
+    Icons.home,
+    Icons.business,
+    Icons.brightness_6,
+    Icons.supervised_user_circle_rounded,
+  ];
+  final nameList = <String>[
+    'Home',
+    'Bills',
+    'Reports',
+    'Profile',
+  ];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    _animationController = AnimationController(
+      duration: Duration(seconds: 1),
+      vsync: this,
+    );
+    curve = CurvedAnimation(
+      parent: _animationController,
+      curve: Interval(
+        0.5,
+        1.0,
+        curve: Curves.fastOutSlowIn,
+      ),
+    );
+
+    animation = Tween<double>(
+      begin: 0,
+      end: 1,
+    ).animate(curve);
+    Future.delayed(
+      Duration(seconds: 1),
+          () => _animationController.forward(),
+    );
+
+    super.initState();
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: _getBody(selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFFF8EAFF),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Bills',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Reports',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.supervised_user_circle_rounded),
-            label: 'Profile',
-          ),
-        ],
-        currentIndex: selectedIndex,
-        type: BottomNavigationBarType.fixed,
-        unselectedItemColor: Colors.grey,
-        selectedItemColor: Color(0xFF8E04CE),
-        unselectedLabelStyle: TextStyle(
-            color: Colors.red
+      floatingActionButton: FloatingActionButton(onPressed: () {  },
+        backgroundColor: Color(0xFF8E04CE),
+        child: Image(
+          image: AppImages.home,
+          height: 25,
+          width: 25,
+          color: Color(0xFFF8EAFF),
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: AnimatedBottomNavigationBar.builder(
+        itemCount: iconList.length,
+        tabBuilder: (int index, bool isActive) {
+          final color = isActive ? Colors.grey : Color(0xFF8E04CE);
+          return Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                iconList[index],
+                size: 24,
+                color: color,
+              ),
+              const SizedBox(height: 4),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Text(
+                  nameList[index],
+                  maxLines: 1,
+                  style: TextStyle(color: color),
+                  // group: autoSizeGroup,
+                ),
+              )
+            ],
+          );
+        },
+        backgroundColor: Color(0xFFF8EAFF),
+        activeIndex: selectedIndex,
+        splashColor: HexColor('#FFA400'),
+        notchAndCornersAnimation: animation,
+        splashSpeedInMilliseconds: 300,
+        notchSmoothness: NotchSmoothness.defaultEdge,
+        gapLocation: GapLocation.center,
+        // leftCornerRadius: 32,
+        // rightCornerRadius: 32,
         onTap: (index){
-          print(index);
           setState(() {
             selectedIndex = index;
-            _getBody(index);
-
           });
         },
       ),
+
     );
   }
   Widget _getBody(int index) {
@@ -73,5 +132,17 @@ class TabBarScreenState extends State<TabBarScreen> {
     }
 
     return Dashboard();
+  }
+}
+
+class HexColor extends Color {
+  HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
+
+  static int _getColorFromHex(String hexColor) {
+    hexColor = hexColor.toUpperCase().replaceAll('#', '');
+    if (hexColor.length == 6) {
+      hexColor = 'FF' + hexColor;
+    }
+    return int.parse(hexColor, radix: 16);
   }
 }
