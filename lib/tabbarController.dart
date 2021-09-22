@@ -14,9 +14,6 @@ class TabBarScreen extends StatefulWidget {
 
 class TabBarScreenState extends State<TabBarScreen> with TickerProviderStateMixin{
   int selectedIndex = 0;
-  // late Animation<double> animation;
-  // late CurvedAnimation curve;
-  // late AnimationController _animationController;
 
   final iconList = <IconData>[
     Icons.home,
@@ -33,28 +30,6 @@ class TabBarScreenState extends State<TabBarScreen> with TickerProviderStateMixi
 
   @override
   void initState() {
-    // TODO: implement initState
-    // _animationController = AnimationController(
-    //   duration: Duration(seconds: 1),
-    //   vsync: this,
-    // );
-    // curve = CurvedAnimation(
-    //   parent: _animationController,
-    //   curve: Interval(
-    //     0.5,
-    //     1.0,
-    //     curve: Curves.fastOutSlowIn,
-    //   ),
-    // );
-    //
-    // animation = Tween<double>(
-    //   begin: 0,
-    //   end: 1,
-    // ).animate(curve);
-    // Future.delayed(
-    //   Duration(seconds: 1),
-    //       () => _animationController.forward(),
-    // );
 
     super.initState();
 
