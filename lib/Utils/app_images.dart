@@ -11,4 +11,9 @@ class AppImages {
   static const AssetImage search_icon = AssetImage(imagePackage + 'search.png');
   static const AssetImage search_background = AssetImage(imagePackage + 'search_background.png');
 
+  static const AssetImage up_white = AssetImage(imagePackage + 'up_white.png');
+  static const AssetImage down_white = AssetImage(imagePackage + 'down_white.png');
+  static const AssetImage ic_down = AssetImage(imagePackage + 'ic_down.png');
+  static const AssetImage home = AssetImage(imagePackage + 'home.png');
+
 }
